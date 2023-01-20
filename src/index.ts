@@ -1,18 +1,17 @@
 #!/usr/bin/env node
 
 // 命令行彩色输出
-import chalk from "chalk";
-import yargs from "yargs";
+import chalk from 'chalk';
+import yargs from 'yargs';
 import { hideBin } from 'yargs/helpers';
-import pkg from "../package.json";
+import pkg from '../package.json';
 // modules
-import { bannerWriter } from "./module/banner";
+import { bannerWriter } from './module/banner';
 
 // 允许自定义version和help
 const argv = yargs(hideBin(process.argv)).help(false).version(false);
 const parsedArgv = argv.parseSync();
 const query = parsedArgv._;
-
 
 // 自定义help信息
 function showHelper() {
@@ -34,15 +33,13 @@ banner <bannerUrl> [filepath] [title]      append a banner to the top of the mar
     process.exit(0);
   }
   if (h || help) {
-    showHelper()
-    process.exit(0)
+    showHelper();
+    process.exit(0);
   }
-  
-  switch(query[0]) {
+
+  switch (query[0]) {
     case 'banner':
-      bannerWriter(query[1] as string, parsedArgv.path as string, parsedArgv.title as string)
+      bannerWriter(query[1] as string, parsedArgv.path as string, parsedArgv.title as string);
       break;
   }
-  
-  
 })();
