@@ -41,3 +41,8 @@ after:
 
 # Demo
 ```
+
+**tool version**  
+update version field of package interactively in the current directory
+
+![demo](./assets/tool-version.png)

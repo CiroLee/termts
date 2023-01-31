@@ -7,6 +7,7 @@ import { hideBin } from 'yargs/helpers';
 import pkg from '../package.json';
 // modules
 import { bannerWriter } from './module/banner';
+import { updateVersion } from './module/version';
 
 // 允许自定义version和help
 const argv = yargs(hideBin(process.argv)).help(false).version(false);
@@ -22,6 +23,7 @@ function showHelper() {
 
 Methods:
 banner <bannerUrl> [filepath] [title]      append a banner to the top of the markdown file
+version                                    update version field of package interactively
   `;
   console.log(helps);
 }
@@ -40,6 +42,9 @@ banner <bannerUrl> [filepath] [title]      append a banner to the top of the mar
   switch (query[0]) {
     case 'banner':
       bannerWriter(query[1] as string, parsedArgv.path as string, parsedArgv.title as string);
+      break;
+    case 'version':
+      updateVersion();
       break;
   }
 })();
