@@ -4,7 +4,7 @@
  */
 import fs from 'fs';
 import chalk from 'chalk';
-const cwd = process.cwd();
+const cwd = process.cwd;
 const template = (url: string, title?: string): string => {
   if (title) {
     return `<div align="center">
@@ -23,7 +23,7 @@ export const bannerWriter = (url: string, filepath?: string, title?: string): vo
     console.log(chalk.red('[method:banner] url is required'));
     process.exit(1);
   }
-  const _filepath = filepath ? filepath : `${cwd}/README.md`;
+  const _filepath = filepath ? filepath : `${cwd()}/README.md`;
   try {
     const md = fs.readFileSync(_filepath, 'utf-8');
     const output = template(url, title) + '\n' + md;

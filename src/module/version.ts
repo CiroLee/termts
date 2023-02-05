@@ -2,11 +2,11 @@ import inquirer from 'inquirer';
 import fs from 'fs';
 import chalk from 'chalk';
 import { fileExist } from '../utils/file';
-const cwd = process.cwd();
+const cwd = process.cwd;
 
 const writeVersion = async (newVersion: string) => {
   try {
-    const filepath = `${cwd}/package.json`;
+    const filepath = `${cwd()}/package.json`;
     const pkg = JSON.parse(fs.readFileSync(filepath, 'utf-8'));
     pkg.version = newVersion;
     fs.writeFileSync(filepath, JSON.stringify(pkg, null, 2), 'utf-8');
@@ -37,7 +37,7 @@ const inputVersion = async (oldVersion: string) => {
 
 export const updateVersion = async () => {
   try {
-    const currentPkgFile = `${cwd}/package.json`;
+    const currentPkgFile = `${cwd()}/package.json`;
     if (await fileExist(currentPkgFile)) {
       throw new Error('package does not exist');
     }
