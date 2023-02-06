@@ -8,6 +8,7 @@ import pkg from '../package.json';
 // modules
 import { bannerWriter } from './module/banner';
 import { updateVersion } from './module/version';
+import { gitCommitMsg } from './module/commit';
 
 // 允许自定义version和help
 const argv = yargs(hideBin(process.argv)).help(false).version(false);
@@ -24,6 +25,7 @@ function showHelper() {
 Methods:
 banner <bannerUrl> [filepath] [title]      append a banner to the top of the markdown file
 version                                    update version field of package interactively
+commit [lang=zh|en]                              shortcut of git commit -m
   `;
   console.log(helps);
 }
@@ -45,6 +47,9 @@ version                                    update version field of package inter
       break;
     case 'version':
       updateVersion();
+      break;
+    case 'commit':
+      gitCommitMsg(parsedArgv.lang as string);
       break;
   }
 })();
