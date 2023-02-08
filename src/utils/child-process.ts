@@ -20,6 +20,7 @@ export default class ChildProcess {
       let result = '';
       child.stdout?.on('data', (data: Buffer | string) => {
         result += data.toString();
+        console.log(result);
       });
       child.on('close', () => {
         resolve(result);
