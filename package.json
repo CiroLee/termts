@@ -1,34 +1,25 @@
 {
   "name": "termts",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "termts is a collection that tiny and useful terminal script tools",
   "main": "lib/index.js",
   "type": "module",
   "bin": {
     "tool": "lib/index.js"
   },
-  "keywords": [
-    "termts",
-    "terminal",
-    "tools",
-    "utils"
-  ],
+  "keywords": ["termts", "terminal", "tools", "utils"],
   "homepage": "https://github.com/CiroLee/termts",
   "bugs": {
     "url": "https://github.com/CiroLee/termts/issues"
   },
-  "files": [
-    "lib"
-  ],
+  "files": ["lib"],
   "scripts": {
     "dev": "tsup --watch",
     "build": "tsup",
     "prepare": "husky install"
   },
   "lint-staged": {
-    "src/**/*.{js,ts}": [
-      "eslint --config .eslintrc"
-    ]
+    "src/**/*.{js,ts}": ["eslint --config .eslintrc"]
   },
   "author": "CiroLee<ciromail@126.com>",
   "license": "MIT",

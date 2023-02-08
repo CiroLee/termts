@@ -66,7 +66,7 @@ export const gitCommitMsg = async (language?: string) => {
       if (!message) {
         throw new Error('commit message can not be empty');
       }
-      await ChildProcess.exec(`git commit -m "${commitType}: ${message}"`);
+      await ChildProcess.spawn(`git commit -m "${commitType}: ${message}"`);
       console.log(chalk.green('Done 🎉'));
     }
   } catch (error) {
