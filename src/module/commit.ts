@@ -1,3 +1,7 @@
+/**
+ * description: shortcut of `git commit -m`
+ * author: CiroLee<https://github.com/CiroLee>
+ */
 import inquirer from 'inquirer';
 import chalk from 'chalk';
 import ChildProcess from '../utils/child-process';

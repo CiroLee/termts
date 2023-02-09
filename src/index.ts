@@ -19,13 +19,13 @@ const query = parsedArgv._;
 function showHelper() {
   const helps = `Usage tool <methods> [options]
 
--v,--version                               output the version number
--h,--help                                  show help info
+-v,--version                                               output the version number
+-h,--help                                                  show help info
 
 Methods:
-banner <bannerUrl> [filepath] [title]      append a banner to the top of the markdown file
-version                                    update version field of package interactively
-commit [lang=zh|en]                              shortcut of git commit -m
+tool banner <bannerUrl> [path] [title] [align] [size]      append a banner to the top of the markdown file
+version                                                    update version field of package interactively
+commit [lang=zh|en]                                        shortcut of git commit -m
   `;
   console.log(helps);
 }
@@ -43,7 +43,19 @@ commit [lang=zh|en]                              shortcut of git commit -m
 
   switch (query[0]) {
     case 'banner':
-      bannerWriter(query[1] as string, parsedArgv.path as string, parsedArgv.title as string);
+      // bannerWriter(
+      //   query[1] as string,
+      //   parsedArgv.path as string,
+      //   parsedArgv.title as string,
+      //   parsedArgv.align as string,
+      // );
+      bannerWriter({
+        url: query[1] as string,
+        filepath: parsedArgv.path as string,
+        title: parsedArgv.title as string,
+        align: parsedArgv.align as string,
+        size: parsedArgv.size as string,
+      });
       break;
     case 'version':
       updateVersion();

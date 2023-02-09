@@ -1,3 +1,7 @@
+/**
+ * description: update version field of package interactively in the current directory
+ * author: CiroLee<https://github.com/CiroLee>
+ */
 import inquirer from 'inquirer';
 import fs from 'fs';
 import chalk from 'chalk';
