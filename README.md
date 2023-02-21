@@ -56,7 +56,7 @@ update version field of package interactively in the current directory
 ![demo](./assets/tool-version.png)
 
 **`tool commit [lang=zh|en]`**  
-shortcut of `git commit -m`. support Chinese(--lang=zh) and English(--lang=en). Default is en
+shortcut of `git commit -m`. support Chinese(--lang=zh) and English(--lang=en). Default is zh
 
 ![demo](./assets/commit-1.png) use --lang param to set language, default is Chinese
 
