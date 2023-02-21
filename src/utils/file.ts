@@ -8,3 +8,12 @@ export const fileExist = async (filepath: string): Promise<boolean> => {
     return false;
   }
 };
+
+export const isDirectory = async (dir: string): Promise<boolean> => {
+  try {
+    const stat = await fsPromise.lstat(dir);
+    return stat.isDirectory();
+  } catch (error) {
+    return false;
+  }
+};

@@ -9,9 +9,10 @@ import pkg from '../package.json';
 import { bannerWriter } from './module/banner';
 import { updateVersion } from './module/version';
 import { gitCommitMsg } from './module/commit';
+import { tree } from './module/tree';
 
 // 允许自定义version和help
-const argv = yargs(hideBin(process.argv)).help(false).version(false);
+const argv = yargs(hideBin(process.argv)).help(false).version(false).array('ignore');
 const parsedArgv = argv.parseSync();
 const query = parsedArgv._;
 
@@ -26,6 +27,7 @@ Methods:
 tool banner <bannerUrl> [path] [title] [align] [size]      append a banner to the top of the markdown file
 version                                                    update version field of package interactively
 commit [lang=zh|en]                                        shortcut of git commit -m
+tree [dir] [deep] [ignore]                                 output the tree structure of the specified directory 
   `;
   console.log(helps);
 }
@@ -43,12 +45,6 @@ commit [lang=zh|en]                                        shortcut of git commi
 
   switch (query[0]) {
     case 'banner':
-      // bannerWriter(
-      //   query[1] as string,
-      //   parsedArgv.path as string,
-      //   parsedArgv.title as string,
-      //   parsedArgv.align as string,
-      // );
       bannerWriter({
         url: query[1] as string,
         filepath: parsedArgv.path as string,
@@ -62,6 +58,9 @@ commit [lang=zh|en]                                        shortcut of git commi
       break;
     case 'commit':
       gitCommitMsg(parsedArgv.lang as string);
+      break;
+    case 'tree':
+      tree(parsedArgv.dir as string, parsedArgv.deep as number, parsedArgv.ignore as Array<string>);
       break;
   }
 })();
