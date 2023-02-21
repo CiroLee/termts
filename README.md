@@ -62,7 +62,7 @@ shortcut of `git commit -m`. support Chinese(--lang=zh) and English(--lang=en). 
 
 ![demo](./assets/commit-2.png)
 
-**tool tree [dir] [deep] [ignore]**  
+**`tool tree [dir] [deep] [ignore]`**  
 output the tree structure of the specified directory
 
 - **dir** the target directory. default is current working directory
