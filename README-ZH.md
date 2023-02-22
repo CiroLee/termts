@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://ciro.club/statics/images/icons/1677073378_cn9z8zOsGVkHhuXm-EcXY.svg" style="width: 320px" alt="banner" />
+  <img src="./assets/termts-icon-512.png" style="width: 320px" alt="banner" />
   <h1 align="left">termts</h1>
 </div>
 
