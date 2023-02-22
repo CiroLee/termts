@@ -3,13 +3,13 @@
   <h1 align="left">termts</h1>
 </div>
 
-> termts is a collection that contains tiny and useful terminal script tools
+> termts 是一个集合，包含小巧而实用的终端脚本工具
 
 node version need >= **14**
 
 [English](README.md) | [简体中文](README-ZH.md)
 
-# install
+# 安装
 
 ```shell
 # npm
@@ -20,15 +20,15 @@ yarn install termts -g
 pnpm add termts -g
 ```
 
-# uses
+# 使用
 
 **`tool banner <bannerUrl> [path] [title] [align] [size]`**  
-Append a banner to the top of the markdown file.
+在 markdown 文件的顶部附加一个横幅
 
-- **path** the path of `README.md` file. if there is no path parameter, the README.md file will be searched for in the current execution directory.
-- **title** will render title if passed
-- **align** supports `center`, `left` and `right`
-- **size** the width of banner image. default is 320px
+- **path** `README.md` 文件的路径. 如果缺省，会在当前执行目录下寻找 README.md 文件
+- **title** 渲染标题文字，默认为空不渲染
+- **align** 支持 `center`, `left` 和 `right`三个定位
+- **size** 图片的宽度，默认为 320px
 
 ```shell
 tool banner https://picsum.photos/987/496 --path=./yourpath/README.md --title="banner" --align=left --size=100%
@@ -52,32 +52,33 @@ after:
 # Demo
 ```
 
-preview:  
+preview:
+
 ![preview](./assets/banner-1.jpg)
 
 **`tool version`**  
-update version field of package interactively in the current directory
+以交互方式更新当前目录中软件包的版本号字段
 
 ![demo](./assets/tool-version.png)
 
 **`tool commit [lang=zh|en]`**  
-shortcut of `git commit -m`. support Chinese(--lang=zh) and English(--lang=en). Default is zh
+`git commit -m` 的快捷方式， 支持中文(--lang=zh)和英文(--lang=en)两种语言，默认为中文
 
-![demo](./assets/commit-1.png) use --lang param to set language, default is Chinese
+![demo](./assets/commit-1.png)
 
 ![demo](./assets/commit-2.png)
 
 **`tool tree [dir] [deep] [ignore]`**  
-output the tree structure of the specified directory
+输出指定目录的树状结构
 
-- **dir** the target directory. default is current working directory
-- **deep** the depth of the catalogue. default is 1
-- **ignore** ignored **first level** list. default is `node_modules` and `.git`
+- **dir** 目标目录文件夹，默认为当前执行目录
+- **deep** 输出的目录结构深度，默认为 1，输出一层目录
+- **ignore** 需要忽略的**一层**目录列表，默认忽略 `node_modules` 和 `.git` 目录
 
 ```shell
 tool tree --dir=./termts --deep=2 --ignore lib
 ```
 
-above will output the tree structure of termts project without lib directory
+以上将输出不带 lib 目录的 termts 项目的树状结构。
 
 ![demo](./assets/tree.jpg)

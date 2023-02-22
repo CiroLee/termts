@@ -24,7 +24,7 @@ function showHelper() {
 -h,--help                                                  show help info
 
 Methods:
-tool banner <bannerUrl> [path] [title] [align] [size]      append a banner to the top of the markdown file
+banner <bannerUrl> [path] [title] [align] [size]      append a banner to the top of the markdown file
 version                                                    update version field of package interactively
 commit [lang=zh|en]                                        shortcut of git commit -m
 tree [dir] [deep] [ignore]                                 output the tree structure of the specified directory 
