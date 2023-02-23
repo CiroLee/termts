@@ -80,4 +80,4 @@ termts tree --dir=./termts --deep=2 --ignore lib
 
 以上将输出不带 lib 目录的 termts 项目的树状结构。
 
-![demo](./assets/termts-tree.jpg)
+![demo](./assets/termts-trees.jpg)

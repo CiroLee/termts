@@ -79,4 +79,4 @@ termts tree --dir=./termts --deep=2 --ignore lib
 
 above will output the tree structure of termts project without lib directory
 
-![demo](./assets/termts-tree.jpg)
+![demo](./assets/termts-trees.jpg)
