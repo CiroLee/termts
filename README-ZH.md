@@ -52,21 +52,20 @@ after:
 # Demo
 ```
 
-preview:
-
 ![preview](./assets/banner-1.jpg)
 
 **`termts version`**  
 以交互方式更新当前目录中软件包的版本号字段
 
-![demo](./assets/termts-version.png)
-
+![demo](./assets/termts-version.jpg)  
 **`termts commit [lang=zh|en]`**  
 `git commit -m` 的快捷方式， 支持中文(--lang=zh)和英文(--lang=en)两种语言，默认为中文
 
-![demo](./assets/commit-1.png)
+![demo](./assets/termts-commit-1.jpg)
 
-![demo](./assets/commit-2.png)
+使用`--lang`参数设置语言
+
+![demo](./assets/termts-commit-2.jpg)
 
 **`termts tree [dir] [deep] [ignore]`**  
 输出指定目录的树状结构
@@ -81,4 +80,4 @@ termts tree --dir=./termts --deep=2 --ignore lib
 
 以上将输出不带 lib 目录的 termts 项目的树状结构。
 
-![demo](./assets/tree.jpg)
+![demo](./assets/termts-tree.jpg)

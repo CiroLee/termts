@@ -52,20 +52,19 @@ after:
 # Demo
 ```
 
-preview:  
 ![preview](./assets/banner-1.jpg)
 
 **`termts version`**  
 update version field of package interactively in the current directory
 
-![demo](./assets/termts-version.png)
+![demo](./assets/termts-version.jpg)
 
 **`termts commit [lang=zh|en]`**  
 shortcut of `git commit -m`. support Chinese(--lang=zh) and English(--lang=en). Default is zh
 
-![demo](./assets/commit-1.png) use --lang param to set language, default is Chinese
+![demo](./assets/termts-commit-1.jpg) use --lang param to set language, default is Chinese
 
-![demo](./assets/commit-2.png)
+![demo](./assets/termts-commit-2.jpg)
 
 **`termts tree [dir] [deep] [ignore]`**  
 output the tree structure of the specified directory
@@ -80,4 +79,4 @@ termts tree --dir=./termts --deep=2 --ignore lib
 
 above will output the tree structure of termts project without lib directory
 
-![demo](./assets/tree.jpg)
+![demo](./assets/termts-tree.jpg)
