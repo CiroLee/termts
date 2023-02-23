@@ -22,7 +22,7 @@ pnpm add termts -g
 
 # 使用
 
-**`tool banner <bannerUrl> [path] [title] [align] [size]`**  
+**`termts banner <bannerUrl> [path] [title] [align] [size]`**  
 在 markdown 文件的顶部附加一个横幅
 
 - **path** `README.md` 文件的路径. 如果缺省，会在当前执行目录下寻找 README.md 文件
@@ -31,7 +31,7 @@ pnpm add termts -g
 - **size** 图片的宽度，默认为 320px
 
 ```shell
-tool banner https://picsum.photos/987/496 --path=./yourpath/README.md --title="banner" --align=left --size=100%
+termts banner https://picsum.photos/987/496 --path=./yourpath/README.md --title="banner" --align=left --size=100%
 ```
 
 example:  
@@ -56,19 +56,19 @@ preview:
 
 ![preview](./assets/banner-1.jpg)
 
-**`tool version`**  
+**`termts version`**  
 以交互方式更新当前目录中软件包的版本号字段
 
-![demo](./assets/tool-version.png)
+![demo](./assets/termts-version.png)
 
-**`tool commit [lang=zh|en]`**  
+**`termts commit [lang=zh|en]`**  
 `git commit -m` 的快捷方式， 支持中文(--lang=zh)和英文(--lang=en)两种语言，默认为中文
 
 ![demo](./assets/commit-1.png)
 
 ![demo](./assets/commit-2.png)
 
-**`tool tree [dir] [deep] [ignore]`**  
+**`termts tree [dir] [deep] [ignore]`**  
 输出指定目录的树状结构
 
 - **dir** 目标目录文件夹，默认为当前执行目录
@@ -76,7 +76,7 @@ preview:
 - **ignore** 需要忽略的**一层**目录列表，默认忽略 `node_modules` 和 `.git` 目录
 
 ```shell
-tool tree --dir=./termts --deep=2 --ignore lib
+termts tree --dir=./termts --deep=2 --ignore lib
 ```
 
 以上将输出不带 lib 目录的 termts 项目的树状结构。

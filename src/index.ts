@@ -18,7 +18,7 @@ const query = parsedArgv._;
 
 // 自定义help信息
 function showHelper() {
-  const helps = `Usage tool <methods> [options]
+  const helps = `Usage termts <methods> [options]
 
 -v,--version                                               output the version number
 -h,--help                                                  show help info
