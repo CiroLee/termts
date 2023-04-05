@@ -10,6 +10,7 @@ import { bannerWriter } from './module/banner';
 import { updateVersion } from './module/version';
 import { gitCommitMsg } from './module/commit';
 import { tree } from './module/tree';
+import { winLs } from './module/win-ls';
 
 // 允许自定义version和help
 const argv = yargs(hideBin(process.argv)).help(false).version(false).array('ignore');
@@ -24,10 +25,12 @@ function showHelper() {
 -h,--help                                                  show help info
 
 Methods:
-banner <bannerUrl> [path] [title] [align] [size]      append a banner to the top of the markdown file
+banner <bannerUrl> [path] [title] [align] [size]           append a banner to the top of the markdown file
 version                                                    update version field of package interactively
 commit [lang=zh|en]                                        shortcut of git commit -m
-tree [dir] [deep] [ignore]                                 output the tree structure of the specified directory 
+tree [dir] [deep] [ignore]                                 output the tree structure of the specified directory
+ls                                                         display the contents of the current directory. 
+                                                           like ls in linux
   `;
   console.log(helps);
 }
@@ -61,6 +64,9 @@ tree [dir] [deep] [ignore]                                 output the tree struc
       break;
     case 'tree':
       tree(parsedArgv.dir as string, parsedArgv.deep as number, parsedArgv.ignore as Array<string>);
+      break;
+    case 'ls':
+      winLs();
       break;
   }
 })();

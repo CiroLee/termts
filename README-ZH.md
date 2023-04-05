@@ -7,7 +7,7 @@
 
 node version need >= **14**
 
-[English](README.md) | [简体中文](README-ZH.md)
+[English](README.md) | 简体中文
 
 # 安装
 
@@ -21,6 +21,8 @@ pnpm add termts -g
 ```
 
 # 使用
+
+tips: 在 0.0.9 版本之后，可以使用`tt` 或 `termts`激活命令
 
 **`termts banner <bannerUrl> [path] [title] [align] [size]`**  
 在 markdown 文件的顶部附加一个横幅
@@ -81,3 +83,9 @@ termts tree --dir=./termts --deep=2 --ignore lib
 以上将输出不带 lib 目录的 termts 项目的树状结构。
 
 ![demo](./assets/termts-trees.jpg)
+
+**termts ls**  
+展示当前目录下的内容。类似 linux 的`ls`命令  
+tips: 更适用于 window 系统平铺输出内容
+
+![demo](./assets/termts-ls.png)

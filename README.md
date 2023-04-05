@@ -7,7 +7,7 @@
 
 node version need >= **14**
 
-[English](README.md) | [简体中文](README-ZH.md)
+English | [简体中文](README-ZH.md)
 
 # install
 
@@ -21,6 +21,8 @@ pnpm add termts -g
 ```
 
 # uses
+
+tips: now(version > 0.0.9), you can use `tt` or `termts` to trigger commands
 
 **`termts banner <bannerUrl> [path] [title] [align] [size]`**  
 Append a banner to the top of the markdown file.
@@ -80,3 +82,9 @@ termts tree --dir=./termts --deep=2 --ignore lib
 above will output the tree structure of termts project without lib directory
 
 ![demo](./assets/termts-trees.jpg)
+
+**termts ls**  
+display the contents of the current directory. like ls in linux  
+tips: more suitable for window systems requiring tiled output
+
+![demo](./assets/termts-ls.png)

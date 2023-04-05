@@ -1,11 +1,12 @@
 {
   "name": "termts",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "termts is a collection that contains tiny and useful terminal script tools",
   "main": "lib/index.js",
   "type": "module",
   "bin": {
-    "termts": "lib/index.js"
+    "termts": "lib/index.js",
+    "tt": "lib/index.js"
   },
   "keywords": [
     "termts",
@@ -37,20 +38,21 @@
     "@types/inquirer": "^9.0.3",
     "@types/node": "^18.15.11",
     "@types/yargs": "^17.0.24",
-    "@typescript-eslint/eslint-plugin": "^5.57.0",
-    "@typescript-eslint/parser": "^5.57.0",
+    "@typescript-eslint/eslint-plugin": "^5.57.1",
+    "@typescript-eslint/parser": "^5.57.1",
     "commitlint": "^17.5.1",
     "eslint": "^8.37.0",
     "husky": "^8.0.3",
     "lint-staged": "^13.2.0",
     "prettier": "^2.8.7",
     "tsup": "^6.7.0",
-    "typescript": "^5.0.2"
+    "typescript": "^5.0.3"
   },
   "dependencies": {
     "chalk": "^5.2.0",
     "inquirer": "^9.1.5",
     "ora": "^6.3.0",
+    "table": "^6.8.1",
     "yargs": "^17.7.1"
   }
 }
