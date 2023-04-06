@@ -88,4 +88,4 @@ termts tree --dir=./termts --deep=2 --ignore lib
 展示当前目录下的内容。类似 linux 的`ls`命令  
 tips: 更适用于 window 系统平铺输出内容
 
-![demo](./assets/termts-ls.png)
+![demo](./assets/termts-ls.jpg)

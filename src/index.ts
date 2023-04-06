@@ -21,16 +21,15 @@ const query = parsedArgv._;
 function showHelper() {
   const helps = `Usage termts <methods> [options]
 
--v,--version                                               output the version number
--h,--help                                                  show help info
+-v,--version                                             output the version number
+-h,--help                                                show help info
 
-Methods:
-banner <bannerUrl> [path] [title] [align] [size]           append a banner to the top of the markdown file
-version                                                    update version field of package interactively
-commit [lang=zh|en]                                        shortcut of git commit -m
-tree [dir] [deep] [ignore]                                 output the tree structure of the specified directory
-ls                                                         display the contents of the current directory. 
-                                                           like ls in linux
+methods:
+banner <bannerUrl> [path] [title] [align] [size]         append a banner to the top of the markdown file
+version                                                  update version field of package interactively
+commit [lang=zh|en]                                      shortcut of git commit -m
+tree [dir] [deep] [ignore]                               output the tree structure of the specified directory
+ls                                                       display the contents of the current directory.like ls in linux
   `;
   console.log(helps);
 }

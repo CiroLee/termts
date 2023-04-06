@@ -87,4 +87,4 @@ above will output the tree structure of termts project without lib directory
 display the contents of the current directory. like ls in linux  
 tips: more suitable for window systems requiring tiled output
 
-![demo](./assets/termts-ls.png)
+![demo](./assets/termts-ls.jpg)
