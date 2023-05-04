@@ -89,3 +89,6 @@ termts tree --dir=./termts --deep=2 --ignore lib
 tips: 更适用于 window 系统平铺输出内容
 
 ![demo](./assets/termts-ls.jpg)
+
+**repo**  
+使用默认浏览器打开当前仓库链接

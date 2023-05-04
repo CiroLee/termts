@@ -1,6 +1,6 @@
 {
   "name": "termts",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "termts is a collection that contains tiny and useful terminal script tools",
   "main": "lib/index.js",
   "type": "module",
@@ -34,25 +34,26 @@
   "author": "CiroLee<ciromail@126.com>",
   "license": "MIT",
   "devDependencies": {
-    "@commitlint/config-conventional": "^17.4.4",
+    "@commitlint/config-conventional": "^17.6.3",
     "@types/inquirer": "^9.0.3",
-    "@types/node": "^18.15.11",
+    "@types/node": "^18.16.3",
     "@types/yargs": "^17.0.24",
-    "@typescript-eslint/eslint-plugin": "^5.57.1",
-    "@typescript-eslint/parser": "^5.57.1",
-    "commitlint": "^17.5.1",
-    "eslint": "^8.37.0",
+    "@typescript-eslint/eslint-plugin": "^5.59.2",
+    "@typescript-eslint/parser": "^5.59.2",
+    "commitlint": "^17.6.3",
+    "eslint": "^8.39.0",
     "husky": "^8.0.3",
-    "lint-staged": "^13.2.0",
-    "prettier": "^2.8.7",
+    "lint-staged": "^13.2.2",
+    "prettier": "^2.8.8",
     "tsup": "^6.7.0",
-    "typescript": "^5.0.3"
+    "typescript": "^5.0.4"
   },
   "dependencies": {
     "chalk": "^5.2.0",
-    "inquirer": "^9.1.5",
+    "inquirer": "^9.2.0",
+    "open": "^9.1.0",
     "ora": "^6.3.0",
     "table": "^6.8.1",
-    "yargs": "^17.7.1"
+    "yargs": "^17.7.2"
   }
 }

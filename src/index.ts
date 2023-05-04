@@ -11,6 +11,7 @@ import { updateVersion } from './module/version';
 import { gitCommitMsg } from './module/commit';
 import { tree } from './module/tree';
 import { winLs } from './module/win-ls';
+import { repo } from './module/repo';
 
 // 允许自定义version和help
 const argv = yargs(hideBin(process.argv)).help(false).version(false).array('ignore');
@@ -30,6 +31,7 @@ version                                                  update version field of
 commit [lang=zh|en]                                      shortcut of git commit -m
 tree [dir] [deep] [ignore]                               output the tree structure of the specified directory
 ls                                                       display the contents of the current directory.like ls in linux
+repo                                                     open the repository of current project on your default browser
   `;
   console.log(helps);
 }
@@ -66,6 +68,9 @@ ls                                                       display the contents of
       break;
     case 'ls':
       winLs();
+      break;
+    case 'repo':
+      repo();
       break;
   }
 })();

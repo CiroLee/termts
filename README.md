@@ -88,3 +88,6 @@ display the contents of the current directory. like ls in linux
 tips: more suitable for window systems requiring tiled output
 
 ![demo](./assets/termts-ls.jpg)
+
+**repo**  
+open the repository of current project on your default browser
