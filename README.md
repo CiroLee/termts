@@ -89,5 +89,5 @@ tips: more suitable for window systems requiring tiled output
 
 ![demo](./assets/termts-ls.jpg)
 
-**repo**  
+**termts repo**  
 open the repository of current project on your default browser
