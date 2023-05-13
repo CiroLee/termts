@@ -9,11 +9,17 @@ export async function repo() {
   try {
     const { stdout } = await ChildProcess.exec('git config --get remote.origin.url');
     if (stdout) {
-      const repoUrl = stdout
-        .toString()
-        .trim()
-        .replace(/\.git$/, '');
-      open(repoUrl);
+      const repoUrl = stdout.toString().trim();
+      let url = '';
+      if (repoUrl.startsWith('https://')) {
+        url = repoUrl.replace(/\.git$/, '');
+      } else if (repoUrl.startsWith('git@')) {
+        url = repoUrl
+          .replace(':', '/')
+          .replace(/^git@/g, 'https://')
+          .replace(/\.git$/, '');
+      }
+      open(url);
     } else {
       throw new Error('current project is not a git repository');
     }
