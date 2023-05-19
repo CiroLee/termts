@@ -12,6 +12,7 @@ import { gitCommitMsg } from './module/commit';
 import { tree } from './module/tree';
 import { winLs } from './module/win-ls';
 import { repo } from './module/repo';
+import { generateLicense } from './module/license';
 
 // 允许自定义version和help
 const argv = yargs(hideBin(process.argv)).help(false).version(false).array('ignore');
@@ -32,6 +33,7 @@ commit [lang=zh|en]                                      shortcut of git commit 
 tree [dir] [deep] [ignore]                               output the tree structure of the specified directory
 ls                                                       display the contents of the current directory.like ls in linux
 repo                                                     open the repository of current project on your default browser
+license                                                  generate the license
   `;
   console.log(helps);
 }
@@ -71,6 +73,9 @@ repo                                                     open the repository of 
       break;
     case 'repo':
       repo();
+      break;
+    case 'license':
+      generateLicense();
       break;
   }
 })();

@@ -92,3 +92,8 @@ tips: 更适用于 window 系统平铺输出内容
 
 **termts repo**  
 使用默认浏览器打开当前仓库链接
+
+**termts license**  
+在当前路径以交互的方式生成 license 文件
+
+![termts-license](./assets/termts-license.gif)

@@ -91,3 +91,8 @@ tips: more suitable for window systems requiring tiled output
 
 **termts repo**  
 open the repository of current project on your default browser
+
+**termts license**  
+generate the license file interactively in the current path
+
+![termts-license](./assets/termts-license.gif)
