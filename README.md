@@ -96,3 +96,14 @@ open the repository of current project on your default browser
 generate the license file interactively in the current path
 
 ![termts-license](./assets/termts-license.gif)
+
+**termts len \<string>**  
+output the length of the specified string
+
+```shell
+termts len abcd
+// 4
+
+termts len "hello world"
+// 11
+```

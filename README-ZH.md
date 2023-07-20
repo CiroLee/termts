@@ -97,3 +97,14 @@ tips: 更适用于 window 系统平铺输出内容
 在当前路径以交互的方式生成 license 文件
 
 ![termts-license](./assets/termts-license.gif)
+
+**termts len \<string>**  
+输出string字符串的长度
+
+```shell
+termts len abcd
+// 4
+
+termts len "hello world"
+// 11
+```

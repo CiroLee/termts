@@ -34,6 +34,7 @@ tree [dir] [deep] [ignore]                               output the tree structu
 ls                                                       display the contents of the current directory.like ls in linux
 repo                                                     open the repository of current project on your default browser
 license                                                  generate the license
+len <string>                                             output the length of specified string     
   `;
   console.log(helps);
 }
@@ -76,6 +77,14 @@ license                                                  generate the license
       break;
     case 'license':
       generateLicense();
+      break;
+    case 'len':
+      try {
+        console.log(String(query[1]).length);
+      } catch (error) {
+        console.error(error);
+        process.exit(1);
+      }
       break;
   }
 })();
