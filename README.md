@@ -3,7 +3,9 @@
   <h1 align="left">termts</h1>
 </div>
 
-> termts is a collection that contains tiny and useful terminal script termts
+> termts is a collection that contains tiny and useful terminal script termts      
+   
+🚧 this Repository is Archived, please use [go-termts](https://github.com/CiroLee/go-termts) instead       
 
 node version need >= **14**
 
@@ -12,7 +14,7 @@ English | [简体中文](README-ZH.md)
 # install
 
 ```shell
-# npm
+# npms
 npm install -g
 # yarn
 yarn install termts -g
